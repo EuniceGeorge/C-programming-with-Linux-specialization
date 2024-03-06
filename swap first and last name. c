@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main(){
+    
+    int i = 0;
+    int num;
+    char word1[101];
+    char word2[101];
+    
+    scanf("%d", &num);
+    
+    while (i < num){
+        scanf("%s %s\n", word1, word2);
+        printf("%s %s\n", word2, word1);
+        i++;
+    }
+    return 0;
+}
