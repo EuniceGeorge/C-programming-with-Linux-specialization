@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int minTemperature, maxTemperature;
+    int temperature;
+
+    // Input: Read the minimum and maximum safe temperatures
+   // printf("Enter the minimum safe temperature: ");
+    scanf("%d", &minTemperature);
+
+   // printf("Enter the maximum safe temperature: ");
+    scanf("%d", &maxTemperature);
+
+    // Continuously read temperatures until -999 is encountered
+    while (1) {
+        //printf("Enter temperature (-999 to stop): ");
+        scanf("%d", &temperature);
+
+        // Check if temperature reading is done
+        if (temperature == -999) {
+            break;
+        }
+
+        // Check if the temperature is within the safe range
+        if (temperature >= minTemperature && temperature <= maxTemperature) {
+            printf("Nothing to report\n");
+        } else {
+            // Display "Alert!" and stop reading temperatures
+            printf("Alert!\n");
+            break;
+        }
+    }
+
+    return 0;
+}
