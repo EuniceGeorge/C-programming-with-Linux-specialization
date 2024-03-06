@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main (void){
+    
+    int i=0;
+    int num;
+    char word[101];
+    
+    scanf("%d", &num);
+    scanf("%s", word);
+    
+    while (i<num){
+        printf("%s\n", word);
+        i++;
+    }
+    return 0;
+}
