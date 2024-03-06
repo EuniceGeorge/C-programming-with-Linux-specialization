@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main(){
+    int i;
+    int ingredient = 0;
+    int ingredient_id = 0;
+    int size = 10;
+    int array [10];
+    
+    for(i =0; i < 10; i++){
+    scanf("%d", &ingredient);
+    array[size] = ingredient;
+    size += 1;
+    }
+    for (i =0; i<10; i++){
+    scanf("%d", &ingredient_id);
+    array[ingredient_id] = ingredient;
+    printf("%d", array[ingredient_id]);
+    }
+    return 0;
+}
