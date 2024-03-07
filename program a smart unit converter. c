@@ -1,0 +1,63 @@
+#include <stdio.h>
+
+double meters (double x);
+double gram (double y);
+double celcius (double z);
+void performConversion (double value,char unit);
+
+int main() {
+    int num_conversions;
+    scanf("%d", &num_conversions);
+
+    while (num_conversions--) {
+        double value;
+        char unit;
+        scanf("%lf %c", &value, &unit);
+
+        performConversion(value, unit);
+    }
+    return 0;
+}
+
+void performConversion (double value, char unit){
+    double converted_value;
+    const char* converted_unit;
+
+    switch (unit) {
+        case 'm':
+            converted_value = meters (value);
+            converted_unit = "ft";
+            break;
+        case 'g':
+            converted_value = gram (value);
+            converted_unit = "lbs";
+            break;
+        case 'c':
+            converted_value = celcius (value);
+            converted_unit = "f";
+            break;
+        default:
+            printf("Invalid unit: %c\n", unit);
+            return;
+    }
+
+    printf("%.6f %s\n", converted_value, converted_unit);
+}
+
+double meters (double x){
+    double Result;
+     Result = x * 3.2808;
+    return (Result);
+}
+
+double gram (double y){
+    double convert;
+    convert = y * 0.002205;
+    return (convert);
+}
+
+double celcius (double z){
+    double cel;
+    cel = 32 + 1.8 * z;
+    return (cel);
+}
