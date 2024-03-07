@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(void){
+    
+    int num;
+    char word[101];
+    int i;
+    int len = 0;
+    int nxtlen = 0;
+    
+    scanf("%d", &num);
+    
+    for (i = 0; i<num; i++){
+        scanf("%s", word);
+        
+        while(word[len] != '\0'){
+            len++;
+        }
+        if (len > nxtlen){
+            nxtlen = len;
+        }
+    }
+        printf("%d", nxtlen);
+    
+    return 0;
+
+}
